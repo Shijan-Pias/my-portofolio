@@ -4,8 +4,8 @@ import Home from '../Home';
 import About from '../Pages/About';
 import Home1 from '../Home1';
 import Skills from '../Pages/Skills';
-import Contact from '../Pages/Contract';
 import Projects from '../Project/Projects';
+import Contact from '../Pages/Contact';
 
 const router = createBrowserRouter([
     {
