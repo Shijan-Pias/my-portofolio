@@ -1,8 +1,8 @@
-import { Download } from "lucide-react";
 
 export const AnimatedBorderButton = ({ children }) => {
   return (
-    <button
+    
+    <button 
       className="relative bg-transparent border border-border 
         text-foreground hover:border-primary/50 transition-all 
         duration-1000 focus:outline-none focus-visible:ring-2 
