@@ -1,60 +1,63 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { Github, Linkedin, Twitter, Heart } from "lucide-react";
 
-const Footer = () => {
+const socialLinks = [
+  { icon: Github, href: "#", label: "GitHub" },
+  { icon: Linkedin, href: "#", label: "LinkedIn" },
+  { icon: Twitter, href: "#", label: "Twitter" },
+];
+
+const footerLinks = [
+  { href: "about", label: "About" },
+  { href: "projects", label: "Projects" },
+  { href: "experience", label: "Experience" },
+  { href: "contact", label: "Contact" },
+];
+
+export const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="bg-gray-900 text-gray-300 py-8 px-6 mt-16">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+    <footer className="py-12 border-t border-border">
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+          {/* Logo & Copyright */}
+          <div className="text-center md:text-left">
+            <a href="#" className="text-xl font-bold tracking-tight">
+              PM<span className="text-primary">.</span>
+            </a>
+            <p className="text-sm text-muted-foreground mt-2">
+              © {currentYear} Pedro Machado. All rights reserved.
+            </p>
+          </div>
 
-        {/* Left Section */}
-        <div className="text-center md:text-left">
-          <h2 className="text-xl font-semibold text-white">Shijan Piyesh</h2>
-          <p className="text-gray-400 text-sm">
-            Web Developer • MERN Stack • Passionate Coder
-          </p>
+          {/* Links */}
+          <nav className="flex flex-wrap justify-center gap-6">
+            {footerLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+
+          {/* Social Links */}
+          <div className="flex items-center gap-4">
+            {socialLinks.map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                aria-label={social.label}
+                className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
+              >
+                <social.icon className="w-5 h-5" />
+              </a>
+            ))}
+          </div>
         </div>
-
-        {/* Middle Section (Quick Links) */}
-        <div className="flex gap-6 text-sm">
-          <a href="/" className="hover:text-blue-400 transition">Home</a>
-          <a href="/about" className="hover:text-blue-400 transition">About</a>
-          <a href="/skills" className="hover:text-blue-400 transition">Skills</a>
-          <a href="/projects" className="hover:text-blue-400 transition">Projects</a>
-          <a href="/contact" className="hover:text-blue-400 transition">Contact</a>
-        </div>
-
-        {/* Right Section (Social Links) */}
-        <div className="flex gap-5 text-xl">
-          <a
-            href="https://github.com/Shijan-Pias"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-400 transition"
-          >
-            <FaGithub />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/shijan-pias-222b39315/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-400 transition"
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            href="mailto:shijanpiyesh@gmail.com"
-            className="hover:text-blue-400 transition"
-          >
-            <FaEnvelope />
-          </a>
-        </div>
-      </div>
-
-      {/* Bottom Line */}
-      <div className="text-center text-gray-500 text-sm mt-8 border-t border-gray-700 pt-4">
-        © {new Date().getFullYear()} Shijan Piyesh — All Rights Reserved.
       </div>
     </footer>
   );
 };
-
-export default Footer;

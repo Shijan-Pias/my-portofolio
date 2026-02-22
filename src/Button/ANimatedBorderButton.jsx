@@ -1,5 +1,5 @@
 
-export const AnimatedBorderButton = ({ children }) => {
+ const AnimatedBorderButton = ({ children }) => {
   return (
     
     <button 
@@ -36,3 +36,4 @@ export const AnimatedBorderButton = ({ children }) => {
     </button>
   );
 };
+export default AnimatedBorderButton;

@@ -3,9 +3,10 @@ import { createBrowserRouter } from 'react-router';
 import Home from '../Home';
 import About from '../Pages/About';
 import Home1 from '../Home1';
-import Skills from '../Pages/Skills';
 import Projects from '../Project/Projects';
 import Contact from '../Pages/Contact';
+import Experience from '../Pages/Experience';
+import Testimonials from '../Pages/Testimonials';
 
 const router = createBrowserRouter([
     {
@@ -23,16 +24,20 @@ const router = createBrowserRouter([
 
             },
             {
-                path:'skills',
-                Component:Skills
-            },
-            {
                 path:'contact',
                 Component: Contact
             },
             {
                 path:'projects',
                 Component:Projects
+            },
+            {
+                path:'experience',
+                Component: Experience
+            },
+            {
+                path:'testimonials',
+                Component : Testimonials
             }
         ]
     },

@@ -1,65 +1,103 @@
-import { motion } from "framer-motion";
-import profilePic from "../assets/2d554837-2b6c-4815-bbe3-740979ed92e9.jpeg"; // your image path
+import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
+
+const highlights = [
+  {
+    icon: Code2,
+    title: "Clean Code",
+    description:
+      "Writing maintainable, scalable code that stands the test of time.",
+  },
+  {
+    icon: Rocket,
+    title: "Performance",
+    description:
+      "Optimizing for speed and delivering lightning-fast user experiences.",
+  },
+  {
+    icon: Users,
+    title: "Collaboration",
+    description: "Working closely with teams to bring ideas to life.",
+  },
+  {
+    icon: Lightbulb,
+    title: "Innovation",
+    description:
+      "Staying ahead with the latest technologies and best practices.",
+  },
+];
 
 const About = () => {
   return (
-    <section className="min-h-screen bg-gray-50 flex flex-col justify-center items-center pt-24 px-6">
-      <div className="max-w-5xl w-full flex flex-col md:flex-row items-center md:items-start gap-10">
-        {/* Profile Image */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="flex-shrink-0"
-        >
-          <img
-            src={profilePic}
-            alt="Shijan Piyesh"
-            className="w-52 h-52 rounded-2xl object-cover shadow-lg"
-          />
-        </motion.div>
+    <section id="about" className="py-32 relative overflow-hidden">
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Left Column */}
+          <div className="space-y-8">
+            <div className="animate-fade-in">
+              <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">
+                About Me
+              </span>
+            </div>
 
-        {/* About Content */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
-          className="flex-1"
-        >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            About <span className="text-blue-600">Me</span>
-          </h2>
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
+              Building the future,
+              <span className="font-serif italic font-normal text-white">
+                {" "}
+                one component at a time.
+              </span>
+            </h2>
 
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Hello! I’m <span className="font-semibold text-blue-600">Shijan Piyesh</span>, a passionate web developer
-            from Bangladesh. I specialize in building clean, responsive, and
-            user-focused websites using modern web technologies like React,
-            Tailwind CSS, and JavaScript. I love turning ideas into beautiful
-            digital experiences that make people’s lives easier.
-          </p>
+            <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
+              <p>
+                I'm a passionate Full-Stack Developer and a 3rd-year Computer Science
+                student. Over the past year, I have dived deep into web development,
+                transforming my curiosity for technology into fully functional, real-world
+                applications.
+              </p>
+              <p>
+                My core expertise lies in the MERN stack (MongoDB, Express.js, React, Node.js).
+                I enjoy building everything from interactive, user-friendly interfaces using
+                Tailwind CSS to secure, backend-driven platforms like multi-vendor e-commerce
+                systems. Currently, I am also expanding my toolkit by exploring Next.js to
+                build highly optimized, SEO-friendly applications.
+              </p>
+              <p>
+                Balancing my university studies with rigorous hands-on coding has taught me
+                discipline, time management, and fast problem-solving. I am constantly eager
+                to learn, tackle new challenges, and bring value to a professional remote team.
+              </p>
+            </div>
 
-          <p className="text-gray-700 leading-relaxed mb-4">
-            I’m currently studying at university and continuously improving my
-            skills in full-stack development. My focus is on creating scalable
-            web applications with a great user experience and clean UI design.
-          </p>
-
-          <div className="mt-6">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-2">
-               Education
-            </h3>
-            <ul className="list-disc list-inside text-gray-700 space-y-1">
-             
-              <li>Currently studying at Gopalganj Science and Technology University </li>
-              <li>Subject : Computer Science and Engineering (CSE)</li>
-            </ul>
+            <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
+              <p className="text-lg font-medium italic text-foreground">
+                "My mission is to create digital experiences that are not just
+                functional, but truly delightful — products that users love to
+                use and developers love to maintain."
+              </p>
+            </div>
           </div>
 
-        
-        </motion.div>
+          {/* Right Column - Hilights */}
+          <div className="grid sm:grid-cols-2 gap-6">
+            {highlights.map((item, idx) => (
+              <div
+                key={idx}
+                className="glass p-6 rounded-2xl animate-fade-in"
+                style={{ animationDelay: `${(idx + 1) * 100}ms` }}
+              >
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20">
+                  <item.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                <p className="text-sm text-muted-foreground">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
 };
-
 export default About;
