@@ -1,43 +1,52 @@
 const experiences = [
   {
-    period: "2022 — Present",
-    role: "Senior Frontend Engineer",
-    company: "Tech Innovators Inc.",
+    period: "2025 — Present",
+    role: "Computer Science Student",
+    company: "University",
     description:
-      "Leading frontend architecture for a suite of fintech products. Implemented micro-frontend architecture, reduced bundle size by 40%, and mentored a team of 5 developers.",
-    technologies: ["React", "TypeScript", "Next.js", "GraphQL"],
+      "Currently in my 3rd year of Computer Science, focusing on core programming concepts, problem-solving, and database management.",
+    technologies: ["C++", "SQL", "Data Structures", "Theory of Computation"],
     current: true,
   },
   {
-    period: "2020 — 2022",
-    role: "Frontend Engineer",
-    company: "Digital Solutions Co.",
+    period: "Late 2025",
+    role: "Full Stack Developer (Academic Project)",
+    company: "Multi-Vendor Pharmacy System",
     description:
-      "Built and maintained multiple React applications for enterprise clients. Introduced automated testing practices that improved code coverage to 85%.",
-    technologies: ["React", "Redux", "Jest", "Cypress"],
+      "Developed a comprehensive multi-vendor e-commerce platform for medicine sales. Implemented complex features including secure seller dashboards and inventory management.",
+    technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
     current: false,
   },
   {
-    period: "2019 — 2020",
-    role: "Junior Developer",
-    company: "StartUp Labs",
+    period: "Nov 2025",
+    role: "Frontend Developer (Project)",
+    company: "T-Shirt E-Commerce Platform",
     description:
-      "Contributed to the development of a SaaS platform from MVP to production. Collaborated with designers to implement pixel-perfect UI components.",
-    technologies: ["React", "Node.js", "MongoDB", "AWS"],
+      "Built an interactive e-commerce website for custom apparel. Created dynamic forms for sellers to easily add and manage their t-shirt inventory.",
+    technologies: ["React", "Tailwind CSS", "JavaScript"],
     current: false,
   },
   {
-    period: "2018 — 2019",
-    role: "Freelance Developer",
-    company: "Self-Employed",
+    period: "Sept 2025",
+    role: "Full Stack Developer (Project)",
+    company: "Parcel Tracking Application",
     description:
-      "Delivered custom web solutions for small businesses and startups. Built 15+ websites and applications, handling everything from design to deployment.",
-    technologies: ["JavaScript", "PHP", "WordPress", "MySQL"],
+      "Designed and built a complete parcel tracking system. Developed both the interactive frontend interface and the robust backend REST APIs to handle tracking logic.",
+    technologies: ["React", "Express.js", "MongoDB", "REST APIs"],
+    current: false,
+  },
+  {
+    period: "July 2025",
+    role: "Web Developer (Project)",
+    company: "Food Sharing Platform",
+    description:
+      "Created a community-focused web application designed to facilitate food sharing. Focused on building a clean, user-friendly UI and responsive design.",
+    technologies: ["React", "Node.js", "Tailwind CSS"],
     current: false,
   },
 ];
 
- const Experience = () => {
+const Experience = () => {
   return (
     <section id="experience" className="py-32 relative overflow-hidden">
       <div
@@ -52,17 +61,17 @@ const experiences = [
             className="text-secondary-foreground text-sm
            font-medium tracking-wider uppercase animate-fade-in"
           >
-            Career Journey
+            Development Journey
           </span>
           <h2
             className="text-4xl md:text-5xl font-bold
            mt-4 mb-6 animate-fade-in animation-delay-100
             text-secondary-foreground"
           >
-            Experience that{" "}
+            Building skills through{" "}
             <span className="font-serif italic font-normal text-white">
               {" "}
-              speaks volumes.
+              practical execution.
             </span>
           </h2>
 
@@ -70,8 +79,7 @@ const experiences = [
             className="text-muted-foreground
            animate-fade-in animation-delay-200"
           >
-            A timeline of my professional growth, from curious beginner to
-            senior engineer leading teams and building products at scale.
+            A timeline of my academic growth and the hands-on projects I've built using modern web technologies.
           </p>
         </div>
 

@@ -6,7 +6,7 @@ const projects = [
     title: "PharmaHub - Medicine E-Commerce",
     description:
       "A comprehensive multi-vendor pharmacy platform featuring a prescription-based ordering system, admin verification dashboard, and secure payment processing.",
-    image: "/projects/pharmahub.png",
+    image: "/project_1.png",
     tags: ["React", "Node.js", "MongoDB", "Tailwind", "Firebase"],
     link: "https://twelve1-assignment-ph.web.app/",
     ServerSite: "https://github.com/Shijan-Pias/assignment-12-server",
@@ -16,9 +16,9 @@ const projects = [
     title: "T-Shirt E-Commerce Store",
     description:
       "A complete role-based e-commerce solution with dedicated dashboards for users, sellers, and admins. Features inventory management and secure authentication.",
-    image: "/projects/tshirt-store.png",
+    image: "project_2.png",
     tags: ["React", "Express.js", "MongoDB", "daisyUI"],
-    link: "https://t-shirt-project-fda13.web.app/", 
+    link: "https://t-shirt-project-fda13.web.app/",
     ServerSite: "https://github.com/Shijan-Pias/tShirt-server",
     clientSite: 'https://github.com/Shijan-Pias/t-shirt'
   },
@@ -27,12 +27,12 @@ const projects = [
 const Projects = () => {
   return (
     <section id="projects" className="py-32 relative overflow-hidden">
-     
+
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-highlight/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-6 relative z-10">
-       
+
         <div className="text-center mx-auto max-w-3xl mb-16">
           <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
             Featured Work
@@ -49,7 +49,7 @@ const Projects = () => {
           </p>
         </div>
 
-        
+
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, idx) => (
             <div
@@ -57,13 +57,14 @@ const Projects = () => {
               className="group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1 border border-border/50"
               style={{ animationDelay: `${(idx + 1) * 100}ms` }}
             >
-              
-              <div className="relative overflow-hidden aspect-video">
+
+              <div className="relative overflow-hidden aspect-video bg-black rounded-xl">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
                 />
+
                 <div
                   className="absolute inset-0 
                 bg-gradient-to-t from-card via-card/50
@@ -72,7 +73,7 @@ const Projects = () => {
 
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/60 backdrop-blur-sm">
 
-                  
+
                   <a
                     href={project.link}
                     target="_blank"
@@ -83,7 +84,7 @@ const Projects = () => {
                   </a>
 
                   <div className="flex gap-3">
-                    
+
                     <a
                       href={project.clientGithub}
                       target="_blank"
@@ -94,7 +95,7 @@ const Projects = () => {
                       <Github className="w-4 h-4" /> Client
                     </a>
 
-                   
+
                     <a
                       href={project.serverGithub}
                       target="_blank"
@@ -108,7 +109,7 @@ const Projects = () => {
                 </div>
               </div>
 
-             
+
               <div className="p-6 space-y-4">
                 <div className="flex items-start justify-between">
                   <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
@@ -141,7 +142,7 @@ const Projects = () => {
           ))}
         </div>
 
-     
+
         <div className="text-center mt-12 animate-fade-in animation-delay-500">
           <a href="https://github.com/Shijan-Pias" target="_blank" rel="noreferrer">
             <AnimatedBorderButton>

@@ -36,7 +36,7 @@ export const Navbar = () => {
           href="/"
           className="text-xl font-bold tracking-tight hover:text-primary"
         >
-          PM<span className="text-primary">.</span>
+          SP<span className="text-primary">.</span>
         </a>
 
         {/* Desktop Nav */}
