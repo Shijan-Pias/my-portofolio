@@ -94,7 +94,7 @@ export const Banner = () => {
               <AnimatedBorderButton>
                 <Download className="w-5 h-5" />
                 <a
-                  href="/public/Resume_pias.pdf"
+                  href="/Resume_pias.pdf"
                   download
                   
                 >
